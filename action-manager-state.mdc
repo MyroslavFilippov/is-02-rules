@@ -1,0 +1,18 @@
+---
+description: State updates must go through actionManager
+globs: packages/**/*.ts,packages/**/*.tsx
+alwaysApply: false
+---
+
+# State Updates Through actionManager
+
+- Use project state managed by `actionManager`.
+- Do not introduce Redux, Zustand, MobX, or ad-hoc global stores.
+- Route state changes via `actionManager.dispatch()` only.
+- Keep state shape compatible with `AppState`.
+
+## How to verify
+
+- Search changed files for direct state mutation patterns.
+- Confirm new state-changing code calls `actionManager.dispatch()`.
+- Confirm no new third-party state manager dependency was added.

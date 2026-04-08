@@ -1,0 +1,17 @@
+---
+description: Keep changes minimal and task-focused
+alwaysApply: true
+---
+
+# Change Scope Discipline
+
+- Make the smallest change that solves the requested task.
+- Avoid broad refactors unless explicitly requested.
+- Do not modify protected/core files without explicit approval.
+- Call out assumptions and risks when requirements are ambiguous.
+
+## How to verify
+
+- Review diff for unrelated file churn and remove it.
+- Confirm changes map directly to the user request.
+- Ensure any protected-file edits have explicit approval recorded.

@@ -1,0 +1,18 @@
+---
+description: Keep rendering on Canvas 2D pipeline
+globs: packages/**/*.ts,packages/**/*.tsx
+alwaysApply: false
+---
+
+# Canvas Rendering Pipeline
+
+- Use Canvas 2D rendering for drawing operations.
+- Preserve render flow: `Scene -> renderScene() -> canvas context`.
+- Do not switch drawing to React DOM.
+- Do not introduce `react-konva`, `fabric.js`, or `pixi.js`.
+
+## How to verify
+
+- Review rendering changes for canvas context usage.
+- Confirm no JSX/DOM drawing replacement was added.
+- Check `package.json` diff for prohibited rendering dependencies.

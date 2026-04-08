@@ -1,0 +1,18 @@
+---
+description: Require tests for behavior changes
+globs: packages/**/*.ts,packages/**/*.tsx
+alwaysApply: false
+---
+
+# Testing Requirements
+
+- Add or update tests when behavior changes.
+- Prefer colocated tests near modified modules.
+- Cover edge cases for state transitions and rendering-sensitive logic.
+- Do not merge known-failing test updates.
+
+## How to verify
+
+- Check diffs include relevant test updates for behavior changes.
+- Run targeted tests for changed packages.
+- Confirm CI/local test command passes for touched areas.

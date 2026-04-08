@@ -1,0 +1,18 @@
+---
+description: Respect package boundaries and reuse existing utilities
+globs: packages/**/*.ts,packages/**/*.tsx
+alwaysApply: false
+---
+
+# Module Boundaries
+
+- Reuse existing helpers before creating new utility modules.
+- Keep imports scoped to intended package APIs where possible.
+- Avoid circular dependencies across packages.
+- Keep feature changes localized; do not restructure unrelated modules.
+
+## How to verify
+
+- Review import graph in changed files for new cross-package coupling.
+- Confirm no duplicate utility logic was added when equivalents exist.
+- Check for newly introduced circular import warnings/errors.
